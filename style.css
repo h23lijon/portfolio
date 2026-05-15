@@ -518,6 +518,12 @@ p, label, input, button, .footer p {
     background-attachment: scroll; 
     min-height: 60vh; 
   }
+
+  .item {
+    height: auto; 
+    aspect-ratio: 16 / 9; 
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr; 
   }
