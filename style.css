@@ -310,6 +310,8 @@ justify-content: flex-end;
   background-attachment: fixed; 
 }
 
+
+
 /* --- Layout för Text och Bild --- */
 .content-section {
   width: 100%;
@@ -538,6 +540,7 @@ justify-content: flex-end;
     height: auto; 
     aspect-ratio: 4 / 3; 
   }
+
   
   .portfolio-grid {
     grid-template-columns: 1fr; 
