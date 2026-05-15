@@ -613,4 +613,8 @@ p, label, input, button, .footer p {
     font-size: 5rem;
     line-height: 5rem;
   }
+
+  .footer {
+    padding: 1.5rem 0; 
+  }
 }
