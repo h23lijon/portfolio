@@ -172,12 +172,13 @@ p, label, input, button, .footer p {
   text-transform: uppercase; 
 }
 
+
 .hero-section {
   background-image: url(img/bakgrund.png); 
   background-size: cover;
   background-position: center;
   height: 90vh;
-  width: 100vw;
+  width: 100%; 
   display: flex;
   position: relative;
   margin: 0;
@@ -238,7 +239,7 @@ p, label, input, button, .footer p {
   border: none;
 }
 
-/* Bilder */
+/* Bilder INDEX.HTML-cards*/
 .card-illus { background-image: url('img/superstar.png'); }
 .card-info { background-image: url('img/nyhetsbrevsista@300x.png'); }
 .card-comm { background-image: url('img/kaffe2.png'); }
