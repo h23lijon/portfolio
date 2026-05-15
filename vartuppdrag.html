@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafisk Design | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/sft1pux.css">
+  <link rel="stylesheet" href="https://use.typekit.net/sft1pux.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/sft1pux.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="page-container nav-flex">
+      <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">LINNÉA JONES</a>
+      <button id="theme-toggle" class="theme-btn" aria-label="Byt färgtema">
+        <img src="img/glöd@300x.png" alt="Byt tema" width="24" height="24">
+      </button>
+    </div>
+  </nav>
+
+  <header class="vartuppdrag-hero">
+      <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="intro-text">
+        <h1>VÅRT<br>UPPDRAG</h1>
+      </div>
+    </div>
+  </section>
+    </header>
+
+<main class="content-section">
+  
+  <section class="content-row">
+    <div class="text-block">
+      <h2>CO₂CTAIL – INFORMATIONSDESIGN</h2>
+<p>I projektet CO₂ctail låg fokus på att göra komplex information lättare att förstå genom informationsdesign. Med utgångspunkt i de globala målen valdes ett fokus på alkoholkonsumtionens klimatpåverkan. Hela webbplatsen, inklusive design, grafik, tabeller och interaktiva funktioner, skapades från grunden som en del av projektet.</p>
+
+<br>
+
+<p>Projektet utfördes i ett team om två, där jag bland annat ansvarade för den interaktiva kartan och klimatkalkylatorn. Genom att kombinera dessa delar ges användaren möjlighet att utforska regionala mönster och beräkna sitt eget avtryck i CO₂. 
+    </div>
+    <div class="text-block calculator-card-bg" id="calculator">
+      <h3 class="calculator-title">Beräkna klimatpåverkan av din alkoholkonsumtion*</h3>
+      <form id="climate-form" style="display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 2;">
+        <label for="beer" style="color: white; font-size: 0.8rem;">Antal glas öl (33cl) / mån</label>
+        <input type="number" id="beer" placeholder="0" min="0" style="padding: 8px; border-radius: 2px; border: none;">
+        
+        <label for="wine" style="color: white; font-size: 0.8rem;">Antal glas vin (15cl) / mån</label>
+        <input type="number" id="wine" placeholder="0" min="0" style="padding: 8px; border-radius: 2px; border: none;">
+        
+        <label for="spirits" style="color: white; font-size: 0.8rem;">Antal glas sprit (4cl) / mån</label>
+        <input type="number" id="spirits" placeholder="0" min="0" style="padding: 8px; border-radius: 2px; border: none;">
+        
+        <button id="calculate-button" style="margin-top: 15px; padding: 12px; cursor: pointer; background: #fff; color: #273c76; border: none; font-weight: bold; text-transform: uppercase;">Beräkna utsläpp</button>
+      </form>
+      <div id="result" class="hidden" style="margin-top: 1.5rem; padding: 15px; background: rgba(255,255,255,0.9); color: #273c76; border-radius: 2px; position: relative; z-index: 2;"></div>
+    </div>
+  </section>
+  
+  <section class="content-row reverse">
+    
+<div class="image-block" style="padding: 2rem; display: flex; flex-direction: column;">
+  <div id="map" style="width: 100%; height: 100%; min-height: 450px;"></div>
+</div>
+
+    <div class="image-block" id="projekt-bild-sista"></div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+    <div class="page-container">
+      <p>Kandidatexamen Informatik 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

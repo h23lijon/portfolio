@@ -1,0 +1,518 @@
+/* --- 0. Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap');
+
+/* --- 1. Inställningar, Teman och Variabler --- */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1E2A34;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --hero-overlay-color: rgba(255, 255, 255, 0.85); 
+  --hero-text-color: #1E2A34; 
+  --card-bg: #eeeeee;
+  --card-hover-overlay: rgba(255, 255, 255, 0.75);
+  --card-hover-text: #1E2A34;
+  --border-color: #e0e0e0;
+  --radius: 0rem;
+}
+
+body.dark-mode {
+  --bg-color: #1E2A34;
+  --text-color: #ffffff;
+  --nav-bg: rgba(30, 42, 52, 0.95);
+  --hero-overlay-color: rgba(20, 28, 35, 0.9); 
+  --hero-text-color: #ffffff;
+  --card-bg: #2a3b48;
+  --card-hover-overlay: rgba(20, 28, 35, 0.8); 
+  --card-hover-text: #ffffff;
+  --border-color: #384d5e;
+}
+
+/* --- 2. Grundläggande Stilar --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+p, label, input, button, .footer p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.page-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.full-width-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- 3. Navigeringsfält --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.nav-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.spacer {
+  width: 100%;
+  height: 4rem; 
+  background-color: transparent;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+.theme-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: var(--text-color);
+  transition: 0.2s;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* --- 4. Hjälte-sektion --- */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: url('img/bild.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 70px;
+  color: var(--hero-text-color);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hero-overlay-color);
+  z-index: 1;
+}
+
+.hero-inner {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "adore-you-slanted", sans-serif;
+  font-weight: 200; 
+  font-style: italic;
+  font-size: clamp(4rem, 10vw, 7rem); 
+  letter-spacing: 0.1rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.15rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  text-transform: uppercase; 
+}
+
+.hero-section {
+  background-image: url(img/bakgrund.png); 
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+[id] {
+  scroll-margin-top: 7rem; 
+}
+
+.intro-text {
+  text-align: right;
+  margin: 15rem 3rem;
+}
+
+.intro-text h1 {
+  font-family: "Akhand", sans-serif; 
+  font-size: clamp(3rem, 10vw, 9rem); 
+  color: #F0EBE5;
+  margin: 0;
+  line-height: 10rem;
+}
+
+.intro-text p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #F0EBE5;
+  margin: 1rem 0 0 auto; 
+  max-width: 70ch; 
+}
+
+/* --- 5. Portfolio Grid --- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0; 
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  height: 70vh; 
+  background-color: var(--card-bg);
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+/* Bilder */
+.card-illus { background-image: url('img/superstar.png'); }
+.card-info { background-image: url('img/nyhetsbrevsista@300x.png'); }
+.card-comm { background-image: url('img/kaffe2.png'); }
+.card-graph { background-image: url('img/nockmockup.png'); }
+.card-web { background-image: url('img/web_mock.png'); }
+
+.card-motion video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+.card-motion {
+  overflow: hidden;
+}
+
+/* --- 6. Hover-effekt --- */
+.item .overlay {
+  position: absolute;
+  bottom: 0;           
+  left: 0;
+  width: 100%;
+  height: 80px;        
+  background-color: var(--card-hover-overlay);
+  color: var(--card-hover-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%); 
+  transition: transform 0.4s ease;
+}
+
+.item:hover .overlay {
+  transform: translateY(0);
+}
+
+.item .overlay h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+/* --- Undersida: Projekt Hero --- */
+.project-hero {
+  height: 100vh; 
+  width: 100%;
+  background-image: url('img/nockbakgrund2.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+}
+
+/* --- Layout för Text och Bild --- */
+.content-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px; 
+}
+
+.content-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-block, .image-block {
+  flex: 1 1 50%; 
+  min-width: 400px; 
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 8%; 
+  background-color: var(--bg-color);
+}
+
+.text-block h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.image-block {
+  background-size: cover;
+  background-position: center;
+  background-color: var(--card-bg);
+}
+
+/* NOCK */
+.img-1 { background-image: url('img/nockmockup.png'); }
+.img-2 { background-image: url('img/bag.png'); }
+.img-3 { background-image: url('img/pärm4.png'); }
+
+/* VÅRT UPPDRAG */
+.img-01 { background-image: url('img/hero.png'); }
+.img-02 { background-image: url('img/karta_.png'); }
+.img-03 { background-image: url('img/map@300x.png'); }
+
+.img-001 { background-image: url('img/humpe.png'); }
+.img-002 { background-image: url('img/mommywhale.jpg'); }
+.img-003 { background-image: url('img/kompisar.png'); }
+
+/* FROSTBRUNNSDALEN */
+.img-11 { background-image: url('img/kaffe.png'); }
+.img-12 { background-image: url('img/logoo.png'); }
+.img-13 { background-image: url('img/12@300x.png'); }
+
+/* INNEHÅLL & WEBB */
+.img-21 { background-image: url('img/nyhetsbrev33.png'); }
+.img-22 { background-image: url('img/linkedin-post.png'); }
+.img-23 { background-image: url('img/12@300x.png'); }
+
+/* --- 9. Kalkylator & Karta --- */
+
+.hidden {
+  display: none !important;
+}
+
+.calculator h3 {
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.calculator form label {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.calculator input[type="number"] {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1E2A34;
+  font-family: "Quicksand", sans-serif;
+  transition: border 0.2s;
+  outline: none;
+}
+
+.calculator input[type="number"]:focus {
+  border: 2px solid #586AD2;
+}
+
+.calculator button:hover {
+  background-color: #f0f0f0 !important;
+  transform: translateY(-1px);
+}
+
+.calculator-title {
+  font-family: "Cormorant Garamond", serif; 
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+#result {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 1.5rem;
+  padding: 15px;
+  color: #ffffff;
+  background-color: rgba(39, 60, 118, 0.7);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+  line-height: 1.4;
+}
+
+.result-heading {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+#map {
+  background-color: var(--card-bg);
+  border-radius: 2px;
+}
+
+.js-plotly-plot, .plot-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.calculator-card-bg {
+  position: relative;
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.calculator-card-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 21, 40, 0.7);
+  z-index: 1;
+  pointer-events: none; 
+}
+
+#calculator h3, 
+#calculator label, 
+#calculator input, 
+#calculator button {
+  position: relative;
+  z-index: 2;
+}
+
+#calculate-button {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #273c76;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 5; 
+}
+
+#calculate-button:hover {
+  background-color: #f0f0f0 !important;
+  transform: translateY(-1px);
+}
+
+#projekt-bild-sista {
+  background-image: url('img/web_mock.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+/* --- 7. Sidfot --- */
+.footer {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+}
+
+/* --- 8. Responsivitet --- */
+@media (max-width: 850px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; 
+  }
+  .item {
+    height: 350px;
+  }
+  .text-block, .image-block {
+    flex: 1 1 100%; 
+    min-height: 400px;
+  }
+  .content-row.reverse {
+    flex-direction: row; 
+  }
+  .project-hero {
+    height: 60vh; 
+    background-attachment: scroll;
+  }
+}
