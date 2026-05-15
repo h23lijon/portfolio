@@ -502,6 +502,12 @@ p, label, input, button, .footer p {
   .nav-flex {
     padding: 0 20px; 
   }
+
+  .hero {
+    background-size: contain; 
+    background-attachment: scroll; 
+    min-height: 60vh; 
+  }
   .portfolio-grid {
     grid-template-columns: 1fr; 
   }
