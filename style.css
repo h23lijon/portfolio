@@ -35,6 +35,7 @@ body.dark-mode {
   box-sizing: border-box;
 }
 
+
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
@@ -42,6 +43,7 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
+  overflow-x: hidden; /* Lägg till denna rad */
 }
 
 h1, h2, h3 {
@@ -173,12 +175,13 @@ p, label, input, button, .footer p {
 }
 
 
+
 .hero-section {
   background-image: url(img/bakgrund.png); 
   background-size: cover;
   background-position: center;
   height: 90vh;
-  width: 100%; 
+  width: 100vw; /* Ändra tillbaka till 100vw */
   display: flex;
   position: relative;
   margin: 0;
