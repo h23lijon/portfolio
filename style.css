@@ -300,10 +300,19 @@ p, label, input, button, .footer p {
 .project-hero {
   height: 100vh; 
   width: 100%;
-  background-image: url('skog.webp'); 
+  background-image: url('img/skog.webp'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 300px; /* Ändra detta värde för att justera storleken på loggan */
+  height: auto;
+  max-width: 80%;
 }
 
 /* --- Layout för Text och Bild --- */
