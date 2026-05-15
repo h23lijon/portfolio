@@ -520,10 +520,15 @@ p, label, input, button, .footer p {
   }
 
   .item {
-    height: auto; 
-    aspect-ratio: 16 / 9; 
+    /* HÄR ÄR ÄNDRINGEN */
+    height: auto; /* Tar bort den fasta höjden på 350px */
+    
+    /* Ger korten ett fast bildförhållande (bredd / höjd).
+       16/9 är standard för landskapsbilder/TV.
+       Om du vill att korten ska vara lite högre på mobil, testa 4 / 3 istället. */
+    aspect-ratio: 4 / 3; 
   }
-
+  
   .portfolio-grid {
     grid-template-columns: 1fr; 
   }
