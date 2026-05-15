@@ -498,6 +498,10 @@ p, label, input, button, .footer p {
 
 /* --- 8. Responsivitet --- */
 @media (max-width: 850px) {
+
+  .nav-flex {
+    padding: 0 20px; 
+  }
   .portfolio-grid {
     grid-template-columns: 1fr; 
   }
