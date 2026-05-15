@@ -310,9 +310,9 @@ p, label, input, button, .footer p {
 }
 
 .hero-logo {
-  width: 300px; /* Ändra detta värde för att justera storleken på loggan */
+  width: 35rem; 
   height: auto;
-  max-width: 80%;
+  max-width: 95%; 
 }
 
 /* --- Layout för Text och Bild --- */
@@ -587,6 +587,11 @@ p, label, input, button, .footer p {
   .project-hero {
     height: 60vh; 
     background-attachment: scroll;
+  }
+
+  .hero-logo {
+    width: 300px; /* Låst till din ursprungliga mobilvy */
+    max-width: 80%;
   }
 
   .hero h1 {
