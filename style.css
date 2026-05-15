@@ -528,6 +528,14 @@ p, label, input, button, .footer p {
     flex: 1 1 100%; 
     min-height: 400px;
   }
+
+  .item .overlay h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 0.8rem; /* Minskar textstorleken på mindre skärmar */
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
   .content-row.reverse {
     flex-direction: row; 
   }
@@ -535,4 +543,8 @@ p, label, input, button, .footer p {
     height: 60vh; 
     background-attachment: scroll;
   }
+    .intro-text h1 {
+    font-size: 3rem;
+  }
+
 }
