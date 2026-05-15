@@ -181,7 +181,7 @@ p, label, input, button, .footer p {
   background-size: cover;
   background-position: center;
   height: 90vh;
-  width: 100vw; /* Ändra tillbaka till 100vw */
+  width: 100%;
   display: flex;
   position: relative;
   margin: 0;
