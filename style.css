@@ -520,21 +520,18 @@ p, label, input, button, .footer p {
   }
 
   .item {
-    /* HÄR ÄR ÄNDRINGEN */
-    height: auto; /* Tar bort den fasta höjden på 350px */
-    
-    /* Ger korten ett fast bildförhållande (bredd / höjd).
-       16/9 är standard för landskapsbilder/TV.
-       Om du vill att korten ska vara lite högre på mobil, testa 4 / 3 istället. */
+    height: auto; 
     aspect-ratio: 4 / 3; 
   }
   
   .portfolio-grid {
     grid-template-columns: 1fr; 
   }
+
   .item {
     height: 350px;
   }
+
   .text-block, .image-block {
     flex: 1 1 100%; 
     min-height: 400px;
@@ -547,15 +544,18 @@ p, label, input, button, .footer p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
+
   .content-row.reverse {
     flex-direction: row; 
   }
+
   .project-hero {
     height: 60vh; 
     background-attachment: scroll;
   }
+
     .intro-text h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
 }
