@@ -249,6 +249,16 @@ p, label, input, button, .footer p {
   border: none;
 }
 
+.arrow {
+  margin-left: 0.4rem;
+  font-size: 1.1em;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.item:hover .arrow {
+  transform: translateX(3px);
+}
 /* Bilder INDEX.HTML-cards*/
 .card-illus { background-image: url('img/superstar.png'); }
 .card-info { background-image: url('img/Views_01.png'); }
