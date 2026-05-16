@@ -519,15 +519,40 @@ p, label, input, button, .footer p {
   background-position: center;
 }
 
-/* --- 7. Sidfot --- */
+/* --- 7. Footer --- */
 .footer {
-  padding: 60px 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .footer p {
   font-family: "Cormorant Garamond", serif;
   font-size: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 1rem;
+
+}
+
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.dark-icon {
+  display: none;
+}
+
+/* DARK MODE */
+body.dark-mode .light-icon {
+  display: none;
+}
+
+body.dark-mode .dark-icon {
+  display: block;
 }
 
 /* --- 8. Responsivitet --- */
