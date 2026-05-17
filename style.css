@@ -530,23 +530,24 @@ p, label, input, button, .footer p {
   font-size: 1rem;
   letter-spacing: 0.05rem;
 }
-
-.linkedin-link {
-  display: inline-block;
-  margin-top: 1rem;
-
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0.8rem;
 }
 
-.linkedin-icon {
-  width: 24px;
-  height: 24px;
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .dark-icon {
   display: none;
 }
 
-/* DARK MODE */
 body.dark-mode .light-icon {
   display: none;
 }
@@ -554,6 +555,7 @@ body.dark-mode .light-icon {
 body.dark-mode .dark-icon {
   display: block;
 }
+
 
 /* --- 8. Responsivitet --- */
 @media (max-width: 850px) {
