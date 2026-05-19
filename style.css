@@ -385,7 +385,8 @@ p, label, input, button, .footer p {
 
 /* FROSTBRUNNSDALEN */
 .img-11 { background-image: url('img/kaffe.png'); }
-.img-12 { background-image: url('img/logoo.png'); }
+.img-12 { background-image: url('img/logoo.png'); 
+background-size: contain;}
 .img-13 { background-image: url('img/12@300x.png'); }
 
 /* INNEHÅLL & WEBB */
