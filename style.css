@@ -383,11 +383,30 @@ p, label, input, button, .footer p {
 .img-002 { background-image: url('img/mommywhale.jpg'); }
 .img-003 { background-image: url('img/kompisar.png'); }
 
+
+
 /* FROSTBRUNNSDALEN */
+.img-13 {
+  width: 100%;
+  min-height: 500px; /* Justera siffran tills du är nöjd med höjden */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.img-13 {
+  width: 100%;
+  min-height: 600px; /* Justera siffran tills du är nöjd med höjden */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .img-11 { background-image: url('img/kaffe.png'); }
 .img-12 { background-image: url('img/logoo.png'); 
 background-size: contain;}
-.img-13 { background-image: url('img/12@300x.png'); }
+.img-13 { background-image: url('img/frost_mockup_tshirt.png'); 
+}
 
 /* INNEHÅLL & WEBB */
 .img-21 { background-image: url('img/Views_01.png'); }
